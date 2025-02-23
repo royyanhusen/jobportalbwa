@@ -22,6 +22,9 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'avatar',
+        'occupation',
+        'experience',
     ];
 
     /**
@@ -45,5 +48,10 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+
+    }
+
+    public function jobs_applications() {
+        return $this->hasMany(JobCandidate::class);
     }
 }
