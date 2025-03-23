@@ -62,4 +62,8 @@ class JobCandidateController extends Controller
     {
         //
     }
+
+    public function donwload_file() {
+        
+    }
 }
