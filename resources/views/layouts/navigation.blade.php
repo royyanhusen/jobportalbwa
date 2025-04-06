@@ -15,6 +15,29 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+
+                    @can('manage categories')
+                    <x-nav-link :href="route('admin.categories.index')" :active="request()->routeIs('admin.categories.index')">
+                        {{ __('Manage Categories') }}
+                    </x-nav-link>
+                    @endcan
+
+                    @can('manage company')
+                    <x-nav-link :href="route('admin.company.index')" :active="request()->routeIs('admin.company.index')">
+                        {{ __('My Company') }}
+                    </x-nav-link>
+                    @endcan
+
+                    @can('manage jobs')
+                    <x-nav-link :href="route('admin.company_jobs.index')" :active="request()->routeIs('admin.company_jobs.index')">
+                        {{ __('My Listing') }}
+                    @endcan
+                    
+                    @can('apply job')
+                    </x-nav-link> <x-nav-link :href="route('dashboard.my.applications')" :active="request()->routeIs('dashboard.my.applications')">
+                        {{ __('My Job Applications') }}
+                    </x-nav-link>
+                    @endcan
                 </div>
             </div>
 

@@ -12,7 +12,7 @@ class CompanyJobController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.company_jobs.index');
     }
 
     /**
