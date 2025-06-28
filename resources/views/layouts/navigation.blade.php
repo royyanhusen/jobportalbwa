@@ -28,13 +28,14 @@
                     </x-nav-link>
                     @endcan
 
-                    @can('manage jobs')
+                     @can('manage jobs')
                     <x-nav-link :href="route('admin.company_jobs.index')" :active="request()->routeIs('admin.company_jobs.index')">
-                        {{ __('My Listing') }}
+                        {{ __('My Company') }}
+                    </x-nav-link>
                     @endcan
                     
                     @can('apply job')
-                    </x-nav-link> <x-nav-link :href="route('dashboard.my.applications')" :active="request()->routeIs('dashboard.my.applications')">
+                    <x-nav-link :href="route('dashboard.my.applications')" :active="request()->routeIs('dashboard.my.applications')">
                         {{ __('My Job Applications') }}
                     </x-nav-link>
                     @endcan
