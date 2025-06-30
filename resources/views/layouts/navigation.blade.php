@@ -30,7 +30,7 @@
 
                      @can('manage jobs')
                     <x-nav-link :href="route('admin.company_jobs.index')" :active="request()->routeIs('admin.company_jobs.index')">
-                        {{ __('My Company') }}
+                        {{ __('My Listing') }}
                     </x-nav-link>
                     @endcan
                     

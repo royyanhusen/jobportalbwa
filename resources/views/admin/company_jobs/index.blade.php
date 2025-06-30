@@ -45,6 +45,7 @@
                             <p class="text-slate-500 text-sm">Candidates</p>
                             <h3 class="text-indigo-950 text-xl font-bold">
                                 {{ $job->candidates->count() }}
+                                {{-- {{ optional($job->candidates)->count() ?? 0 }} --}}
                             </h3>
                         </div>
                         <div class="hidden md:flex flex-row items-center gap-x-3">
